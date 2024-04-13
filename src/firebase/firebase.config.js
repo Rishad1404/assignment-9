@@ -5,13 +5,16 @@ import { getAuth } from "firebase/auth";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
+console.log("Hello",import.meta.env.VITE_PASS)
+
 const firebaseConfig = {
-  apiKey: "AIzaSyCpc3VrGjU_C7L6bFoS-9vuedgSoYxAoAQ",
-  authDomain: "elite-estates-8b0f7.firebaseapp.com",
-  projectId: "elite-estates-8b0f7",
-  storageBucket: "elite-estates-8b0f7.appspot.com",
-  messagingSenderId: "1045133170308",
-  appId: "1:1045133170308:web:559a99b3931f72c12154d1"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket:import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId:import.meta.env.VITE_appId
 };
 
 // Initialize Firebase

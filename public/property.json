@@ -1,0 +1,111 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Modern Mansion with Ocean View",
+      "segment_name": "Luxury",
+      "description": "Stunning contemporary mansion overlooking the ocean. Features state-of-the-art amenities and luxurious finishes throughout.",
+      "price": "$5,000,000",
+      "status": "sale",
+      "area": "6000 sq ft",
+      "location": "Malibu, California",
+      "facilities": ["infinity pool", "home theater", "gym", "guest house"],
+      "image": "https://example.com/modern_mansion.jpg"
+    },
+    {
+      "id": 2,
+      "estate_title": "Elegant Villa in Tuscany",
+      "segment_name": "Luxury",
+      "description": "Exquisite Tuscan villa surrounded by vineyards and rolling hills. Perfect for those seeking luxury and tranquility.",
+      "price": "$3,500,000",
+      "status": "sale",
+      "area": "4500 sq ft",
+      "location": "Florence, Italy",
+      "facilities": ["private garden", "wine cellar", "infinity pool"],
+      "image": "https://example.com/tuscany_villa.jpg"
+    },
+    {
+      "id": 3,
+      "estate_title": "Penthouse Paradise in Manhattan",
+      "segment_name": "Luxury",
+      "description": "Luxurious penthouse offering unparalleled views of the New York City skyline. Designed for the most discerning urban dwellers.",
+      "price": "$8,000,000",
+      "status": "sale",
+      "area": "3000 sq ft",
+      "location": "New York, USA",
+      "facilities": ["rooftop terrace", "private elevator", "concierge service"],
+      "image": "https://example.com/manhattan_penthouse.jpg"
+    },
+    {
+      "id": 4,
+      "estate_title": "Seaside Retreat in the Hamptons",
+      "segment_name": "Luxury",
+      "description": "Elegant Hamptons estate with direct beach access and panoramic ocean views. Ideal for summer getaways and entertaining.",
+      "price": "$7,200,000",
+      "status": "sale",
+      "area": "5500 sq ft",
+      "location": "East Hampton, New York",
+      "facilities": ["private beach", "tennis court", "sauna", "wine cellar"],
+      "image": "https://example.com/hamptons_retreat.jpg"
+    },
+    {
+      "id": 5,
+      "estate_title": "Mountain Chalet in Aspen",
+      "segment_name": "Luxury",
+      "description": "Luxurious mountain chalet nestled in the heart of Aspen. Ski-in/ski-out access and breathtaking views of the Rockies.",
+      "price": "$6,500,000",
+      "status": "sale",
+      "area": "4000 sq ft",
+      "location": "Aspen, Colorado",
+      "facilities": ["ski room", "hot tub", "fireplace", "game room"],
+      "image": "https://example.com/aspen_chalet.jpg"
+    },
+    {
+      "id": 6,
+      "estate_title": "Exclusive Estate in Beverly Hills",
+      "segment_name": "Luxury",
+      "description": "Iconic Beverly Hills estate offering unparalleled privacy and luxury. A celebrity haven with lavish amenities.",
+      "price": "$12,000,000",
+      "status": "sale",
+      "area": "8000 sq ft",
+      "location": "Beverly Hills, California",
+      "facilities": ["private tennis court", "infinity pool", "home theater", "guest house"],
+      "image": "https://example.com/beverly_hills_estate.jpg"
+    },
+    {
+      "id": 7,
+      "estate_title": "Waterfront Mansion in Miami",
+      "segment_name": "Luxury",
+      "description": "Luxurious waterfront mansion in Miami Beach. Enjoy breathtaking views and unparalleled waterfront living.",
+      "price": "$9,800,000",
+      "status": "sale",
+      "area": "7000 sq ft",
+      "location": "Miami Beach, Florida",
+      "facilities": ["boat dock", "poolside cabana", "wine cellar", "sauna"],
+      "image": "https://example.com/miami_mansion.jpg"
+    },
+    {
+      "id": 8,
+      "estate_title": "Charming Chateau in Provence",
+      "segment_name": "Luxury",
+      "description": "Exquisite chateau nestled amidst the picturesque landscapes of Provence. A serene retreat with timeless elegance.",
+      "price": "$4,200,000",
+      "status": "sale",
+      "area": "6000 sq ft",
+      "location": "Provence, France",
+      "facilities": ["private vineyard", "swimming pool", "tennis court", "gardens"],
+      "image": "https://example.com/provence_chateau.jpg"
+    },
+    {
+      "id": 9,
+      "estate_title": "Contemporary Condo in SoHo",
+      "segment_name": "Luxury",
+      "description": "Sleek and stylish condo in the heart of SoHo. Designed for modern urban living with luxury amenities and designer finishes.",
+      "price": "$2,700,000",
+      "status": "sale",
+      "area": "2000 sq ft",
+      "location": "New York, USA",
+      "facilities": ["rooftop terrace", "fitness center", "24/7 doorman", "private balcony"],
+      "image": "https://example.com/soho_condo.jpg"
+    }
+  ]
+  
