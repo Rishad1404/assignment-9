@@ -3,12 +3,12 @@ import Navbar from "../Shared/Navbar/Navbar";
 
 const Feature = () => {
     return (
-        <div>
+        <div className="container mx-auto">
             <Navbar></Navbar>
             {/* Offers */}
             <div className="container mx-auto px-4 py-16 my-10  md:px-24 lg:px-8 lg:py-20 dark:bg-gray-100 dark:text-gray-800">
                 <h2 className="mb-8 text-4xl text-orange-500 leading-none text-center font-bold">What do we have to offer?</h2>
-                <ul className="grid gap-3 md:grid-cols-2 lg:grid-cols-3 items-center">
+                <ul className="grid gap-3 md:grid-cols-2 lg:grid-cols-3 lg:ml-52">
                     <li className="flex items-center space-x-2">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5 fill-current dark:text-orange-500">
                             <path d="M426.072,86.928A238.75,238.75,0,0,0,88.428,424.572,238.75,238.75,0,0,0,426.072,86.928ZM257.25,462.5c-114,0-206.75-92.748-206.75-206.75S143.248,49,257.25,49,464,141.748,464,255.75,371.252,462.5,257.25,462.5Z"></path>
@@ -140,7 +140,7 @@ const Feature = () => {
             <section className="dark:bg-gray-100 dark:text-gray-800 my-10 container mx-auto">
                 <div className="text-center py-10">
                 <h2 className="text-4xl font-extrabold text-orange-500 my-3">Blogs</h2>
-                <p>Unlocking the Door to Real Estate Wisdom: Your Source for Insights, Tips, and Trends</p>
+                <p className="mx-4">Unlocking the Door to Real Estate Wisdom: Your Source for Insights, Tips, and Trends</p>
                 </div>
                 <div className="container max-auto p-6 mx-auto space-y-6 sm:space-y-12">
                     <a rel="noopener noreferrer" href="#" className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-50">

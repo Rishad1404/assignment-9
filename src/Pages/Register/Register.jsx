@@ -1,33 +1,39 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Link } from "react-router-dom";
+import toast, { Toaster } from 'react-hot-toast';
+import { Link,useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthContext/AuthProvider";
 
 const Register = () => {
 
+    const location = useLocation();
+    const navigate = useNavigate();
 
-    const {createUser}=useContext(AuthContext)
+    const { createUser } = useContext(AuthContext)
 
-    const handleRegister=e=>{
+    const handleRegister = e => {
 
 
         e.preventDefault();
-        const form=new FormData(e.currentTarget)
-        const email=form.get('email')
-        const name=form.get('name')
-        const photo=form.get('photo')
-        const password=form.get('password')
-        console.log(email,name,photo,password)
+        const form = new FormData(e.currentTarget)
+        const email = form.get('email')
+        const name = form.get('name')
+        const photo = form.get('photo')
+        const password = form.get('password')
+        console.log(email, name, photo, password)
+
 
         // Create User
-        createUser(email,password)
-        .then(result=>{
-            console.log(result.user)
-        })
-        .catch(error=>{
-            console.log(error)
-        })
+        createUser(email, password)
+            .then(result => {
+                console.log(result.user)
+                toast.success('User Created Successfully')
+                navigate(location.state = '/')
+            })
+            .catch(error => {
+                console.log(error)
+            })
     }
 
     return (
@@ -38,7 +44,7 @@ const Register = () => {
                 <form onSubmit={handleRegister} noValidate="" action="" className="space-y-6">
                     <div className="space-y-1 text-sm">
                         <label htmlFor="email" className="block dark:text-gray-600">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Email" className="w-full px-4 py-3 rounded-md border dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"/>
+                        <input type="email" name="email" id="email" placeholder="Email" className="w-full px-4 py-3 rounded-md border dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
                     </div>
                     <div className="space-y-1 text-sm">
                         <label htmlFor="userName" className="block dark:text-gray-600">User Name</label>
@@ -55,7 +61,8 @@ const Register = () => {
                             <a rel="noopener noreferrer" href="#">Forgot Password?</a>
                         </div>
                     </div>
-                    <button className="block w-full p-3 text-center rounded-sm dark:text-gray-50 dark:bg-orange-500">Register</button>
+                    <div> <button className="block w-full p-3 text-center rounded-sm dark:text-gray-50 dark:bg-orange-500">Register</button><Toaster position="top-right"
+                        reverseOrder={false} /></div>
                 </form>
                 <div className="flex items-center pt-4 space-x-1">
                     <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>

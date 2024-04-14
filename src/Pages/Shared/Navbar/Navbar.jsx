@@ -1,24 +1,44 @@
-import { Link, NavLink } from 'react-router-dom';
-import logo from '../../../assets/images/logo.png'
+import toast, { Toaster } from 'react-hot-toast';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
+import logo from '../../../assets/images/logo.png';
 import { CgProfile } from "react-icons/cg";
 import { useContext } from 'react';
 import { AuthContext } from '../../../AuthContext/AuthProvider';
-const Navbar = () => {
 
-    const { user, logOut } = useContext(AuthContext)
+const Navbar = () => {
+    const location = useLocation();
+    const navigate = useNavigate();
+    const { user, logOut } = useContext(AuthContext);
 
     const handleLogout = () => {
         logOut()
-            .then()
-            .catch()
+            .then(() => {
+                toast.success('Logged Out',{
+                    duration:2000
+                });
+                navigate(location.state = '/login');
+            })
+            .catch(error => {
+                console.error("Logout error:", error);
+                toast.error("Logout failed",{
+                    duration:2000
+                });
+            });
     }
 
-    const navLinks = <>
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/features'>About</NavLink></li>
-        <li><NavLink to='/properties'>Properties</NavLink></li>
-        <li><NavLink to='/updateProfile'>Update Profile</NavLink></li>
-    </>
+    const navLinks = (
+        <>
+            <li><NavLink className='text-xl font-bold ' to='/'>Home</NavLink></li>
+            <li><NavLink className='text-xl font-bold font-mono' to='/features'>About</NavLink></li>
+            {
+                user ? <li><NavLink className='text-xl font-bold font-mono' to='/properties'>Properties</NavLink></li> : null
+            }
+            <li><NavLink className='text-xl font-bold font-mono' to='/updateProfile'>Update Profile</NavLink></li>
+            {
+                user ? <li><NavLink className='text-xl font-bold font-mono' to='/userProfile'>User Profile</NavLink></li> : null
+            }
+        </>
+    );
 
     return (
         <div className="navbar bg-base-100">
@@ -47,14 +67,13 @@ const Navbar = () => {
 
                 {
                     user ?
-                        <button onClick={handleLogout} className='btn bg-orange-500 text-white'>Logout</button> :
-                        <Link to='/login'><button className='btn bg-orange-500 text-white'>Login</button></Link>
+                        <div><button onClick={handleLogout} className='btn bg-orange-500 text-white text-xl font-mono'>Logout</button><Toaster position="top-right" reverseOrder={false} /></div> :
+                        <Link to='/login'><button className='btn bg-orange-500 text-white text-xl font-mono'>Login</button></Link>
                 }
 
-
             </div>
+            
         </div>
-
     );
 };
 

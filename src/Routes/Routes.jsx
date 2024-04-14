@@ -8,6 +8,7 @@ import Error from "../Pages/Error/Error";
 import PropertyDetails from "../Pages/PropertyDetails/PropertyDetails";
 import Properties from "../Pages/Properties/Properties";
 import Feature from "../Pages/Features/Feature";
+import PrivateRoute from "./PrivateRoute";
 
 const router =createBrowserRouter([
     {
@@ -34,7 +35,7 @@ const router =createBrowserRouter([
             },
             {
                 path:'/property/:id',
-                element:<PropertyDetails></PropertyDetails>,
+                element:<PrivateRoute><PropertyDetails></PropertyDetails></PrivateRoute>,
                 loader:()=>fetch('../../public/property.json')
             },
             {
