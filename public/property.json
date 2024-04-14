@@ -9,7 +9,7 @@
       "area": "6000 sq ft",
       "location": "Malibu, California",
       "facilities": ["infinity pool", "home theater", "gym", "guest house"],
-      "image": "https://example.com/modern_mansion.jpg"
+      "image": "https://i.imgur.com/e0VadQ6.jpeg"
     },
     {
       "id": 2,
@@ -21,7 +21,7 @@
       "area": "4500 sq ft",
       "location": "Florence, Italy",
       "facilities": ["private garden", "wine cellar", "infinity pool"],
-      "image": "https://example.com/tuscany_villa.jpg"
+      "image": "https://i.imgur.com/eursh10.jpeg"
     },
     {
       "id": 3,
@@ -33,7 +33,7 @@
       "area": "3000 sq ft",
       "location": "New York, USA",
       "facilities": ["rooftop terrace", "private elevator", "concierge service"],
-      "image": "https://example.com/manhattan_penthouse.jpg"
+      "image": "https://i.imgur.com/TYqjIhE.jpeg"
     },
     {
       "id": 4,
@@ -45,7 +45,7 @@
       "area": "5500 sq ft",
       "location": "East Hampton, New York",
       "facilities": ["private beach", "tennis court", "sauna", "wine cellar"],
-      "image": "https://example.com/hamptons_retreat.jpg"
+      "image": "https://i.imgur.com/WFzCOA1.jpeg"
     },
     {
       "id": 5,
@@ -57,7 +57,7 @@
       "area": "4000 sq ft",
       "location": "Aspen, Colorado",
       "facilities": ["ski room", "hot tub", "fireplace", "game room"],
-      "image": "https://example.com/aspen_chalet.jpg"
+      "image": "https://i.imgur.com/ePSNtEn.jpeg"
     },
     {
       "id": 6,
@@ -69,7 +69,7 @@
       "area": "8000 sq ft",
       "location": "Beverly Hills, California",
       "facilities": ["private tennis court", "infinity pool", "home theater", "guest house"],
-      "image": "https://example.com/beverly_hills_estate.jpg"
+      "image": "https://i.imgur.com/7WLgPsM.jpeg"
     },
     {
       "id": 7,
@@ -81,7 +81,7 @@
       "area": "7000 sq ft",
       "location": "Miami Beach, Florida",
       "facilities": ["boat dock", "poolside cabana", "wine cellar", "sauna"],
-      "image": "https://example.com/miami_mansion.jpg"
+      "image": "https://i.imgur.com/v24zZ6Q.jpeg"
     },
     {
       "id": 8,
@@ -93,7 +93,7 @@
       "area": "6000 sq ft",
       "location": "Provence, France",
       "facilities": ["private vineyard", "swimming pool", "tennis court", "gardens"],
-      "image": "https://example.com/provence_chateau.jpg"
+      "image": "https://i.imgur.com/dKLwUzL.jpeg"
     },
     {
       "id": 9,
@@ -105,7 +105,7 @@
       "area": "2000 sq ft",
       "location": "New York, USA",
       "facilities": ["rooftop terrace", "fitness center", "24/7 doorman", "private balcony"],
-      "image": "https://example.com/soho_condo.jpg"
+      "image": "https://i.imgur.com/nyoL3Zi.jpeg"
     }
   ]
   
