@@ -7,6 +7,7 @@ import Register from "../Pages/Register/Register";
 import Error from "../Pages/Error/Error";
 import PropertyDetails from "../Pages/PropertyDetails/PropertyDetails";
 import Properties from "../Pages/Properties/Properties";
+import Feature from "../Pages/Features/Feature";
 
 const router =createBrowserRouter([
     {
@@ -26,6 +27,10 @@ const router =createBrowserRouter([
             {
                 path:'/register',
                 element:<Register></Register>
+            },
+            {
+                path:'/features',
+                element:<Feature></Feature>,
             },
             {
                 path:'/property/:id',
