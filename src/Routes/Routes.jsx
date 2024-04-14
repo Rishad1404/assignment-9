@@ -5,6 +5,8 @@ import Root from "../Layout/Root";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import Error from "../Pages/Error/Error";
+import PropertyDetails from "../Pages/PropertyDetails/PropertyDetails";
+import Properties from "../Pages/Properties/Properties";
 
 const router =createBrowserRouter([
     {
@@ -15,7 +17,7 @@ const router =createBrowserRouter([
             {
                 path:'/',
                 element:<Home></Home>,
-                loader:()=>fetch('property.json')
+                loader:()=>fetch('../../public/property.json')
             },
             {
                 path:'/login',
@@ -24,6 +26,16 @@ const router =createBrowserRouter([
             {
                 path:'/register',
                 element:<Register></Register>
+            },
+            {
+                path:'/property/:id',
+                element:<PropertyDetails></PropertyDetails>,
+                loader:()=>fetch('../../public/property.json')
+            },
+            {
+                path:'/properties',
+                element:<Properties></Properties>,
+                loader:()=>fetch('../../public/property.json')
             }
         ]
     }
