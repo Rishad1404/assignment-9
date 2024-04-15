@@ -9,6 +9,8 @@ import PropertyDetails from "../Pages/PropertyDetails/PropertyDetails";
 import Properties from "../Pages/Properties/Properties";
 import Feature from "../Pages/Features/Feature";
 import PrivateRoute from "./PrivateRoute";
+import UpdateProfile from "../Pages/Update Profile/UpdateProfile";
+import UserProfile from "../Pages/User Profile/UserProfile";
 
 const router =createBrowserRouter([
     {
@@ -40,8 +42,16 @@ const router =createBrowserRouter([
             },
             {
                 path:'/properties',
-                element:<Properties></Properties>,
+                element:<PrivateRoute><Properties></Properties></PrivateRoute>,
                 loader:()=>fetch('../../public/property.json')
+            },
+            {
+                path:'/updateProfile',
+                element:<UpdateProfile></UpdateProfile>
+            },
+            {
+                path:'/userProfile',
+                element:<UserProfile></UserProfile>
             }
         ]
     }

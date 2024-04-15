@@ -4,6 +4,7 @@ import logo from '../../../assets/images/logo.png';
 import { CgProfile } from "react-icons/cg";
 import { useContext } from 'react';
 import { AuthContext } from '../../../AuthContext/AuthProvider';
+import { Tooltip } from 'react-tooltip'
 
 const Navbar = () => {
     const location = useLocation();
@@ -23,12 +24,14 @@ const Navbar = () => {
 
     const navLinks = (
         <>
-            <li><NavLink className='text-xl font-bold ' to='/'>Home</NavLink></li>
+            <li><NavLink className='text-xl font-mono font-bold' to='/'>Home</NavLink></li>
             <li><NavLink className='text-xl font-bold font-mono' to='/features'>About</NavLink></li>
+
+            <li><NavLink className='text-xl font-bold font-mono' to='/properties'>Properties</NavLink></li>
+
             {
-                user ? <li><NavLink className='text-xl font-bold font-mono' to='/properties'>Properties</NavLink></li> : null
+                user ? <li><NavLink className='text-xl font-bold font-mono' to='/updateProfile'>Update Profile</NavLink></li> : null
             }
-            <li><NavLink className='text-xl font-bold font-mono' to='/updateProfile'>Update Profile</NavLink></li>
             {
                 user ? <li><NavLink className='text-xl font-bold font-mono' to='/userProfile'>User Profile</NavLink></li> : null
             }
@@ -54,19 +57,26 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-5">
-                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar bg-slate-200">
-                    <div className="rounded-full">
-                        <CgProfile />
+                <div tabIndex={0} role="button" className="h-10 w-10 rounded-full avatar bg-slate-200">
+                    <div id="my-anchor-element-id" className="rounded-full my-anchor-element">
+                        {user && user.photoURL ? (
+                            <img type="button" className="w-full h-full object-cover" src={user.photoURL} alt="Profile" />
+                        ) : (
+                            <CgProfile className="w-full h-full object-cover" />
+                        )}
+                        {user && user.displayName && (
+                            <Tooltip anchorSelect="#my-anchor-element-id" place="left" content={user.displayName} />
+                        )}
                     </div>
                 </div>
 
                 {
                     user ?
-                       <div> <button onClick={handleLogout} className='btn bg-orange-500 text-white text-xl font-mono'>Logout</button><Toaster position="top-right"
-                       reverseOrder={false} /></div> :
+                        <div> <button onClick={handleLogout} className='btn bg-orange-500 text-white text-xl font-mono'>Logout</button><Toaster position="top-right"
+                            reverseOrder={false} /></div> :
                         <Link to='/login'><button className='btn bg-orange-500 text-white text-xl font-mono'>Login</button></Link>
                 }
-                
+
             </div>
 
         </div>

@@ -11,10 +11,14 @@ const PrivateRoute = ({children}) => {
         return <div className="w-16 h-16 lg:mx-[900px] lg:my-[300px] border-4 border-dashed rounded-full animate-spin dark:border-violet-600"></div>
         }
 
-    if(user){
-        return children;
+    if(!user){
+        return <Navigate state={location?.pathname || '/'} to='/login'></Navigate>;
     }
-    return <Navigate state={location.pathname} to='/login'></Navigate>
+    return (
+        <div>
+            {children}
+        </div>
+    )
 };
 
 export default PrivateRoute;

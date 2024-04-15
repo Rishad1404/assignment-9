@@ -6,7 +6,7 @@ const Footer = () => {
 		<div className="lg:w-1/3">
 			<a rel="noopener noreferrer" href="#" className="flex justify-center space-x-3 lg:justify-start">
 				<div className="flex items-center justify-center rounded-full">
-					<img className='w-[150px]' src={logo} alt="" />
+					<img className='md:w-[150px] lg:w-[250px]' src={logo} alt="" />
 				</div>
 			</a>
 		</div>
@@ -75,7 +75,7 @@ const Footer = () => {
 			</div>
 		</div>
 	</div>
-	<div className="py-6 text-sm text-center dark:text-gray-600">© 1968 Company Co. All rights reserved.</div>
+	<div className="py-6 text-sm font-mono text-center dark:text-gray-600">© Elite Estates. All rights reserved.</div>
 </footer>
     );
 };
