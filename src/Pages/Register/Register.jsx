@@ -24,6 +24,19 @@ const Register = () => {
         console.log(email, name, photo, password)
 
 
+        if(password.length<6){
+            toast.error('Your Password should be 6 characters or longer')
+            return
+        }
+        else if(!/[A-Z]/.test(password)){
+            toast.error('Your password should have an Uppercase character')
+            return
+        }
+        else if(!/[a-z]/.test(password)){
+            toast.error('Your password should have an Lowercase character')
+            return
+        }
+
         // Create User
         createUser(email, password)
             .then(result => {
@@ -44,7 +57,7 @@ const Register = () => {
                 <form onSubmit={handleRegister} noValidate="" action="" className="space-y-6">
                     <div className="space-y-1 text-sm">
                         <label htmlFor="email" className="block dark:text-gray-600">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Email" className="w-full px-4 py-3 rounded-md border dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                        <input type="email" name="email" id="email" placeholder="Email" className="w-full px-4 py-3 rounded-md border dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" required/>
                     </div>
                     <div className="space-y-1 text-sm">
                         <label htmlFor="userName" className="block dark:text-gray-600">User Name</label>

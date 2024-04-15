@@ -24,7 +24,7 @@ const Login = () => {
                 navigate(location.state = '/')
             })
             .catch(error => {
-                toast.error("Login Unsuccessful")
+                toast.error("Incorrect Information")
                 console.log(error)
             })
     }

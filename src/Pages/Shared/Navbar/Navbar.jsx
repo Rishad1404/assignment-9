@@ -13,16 +13,11 @@ const Navbar = () => {
     const handleLogout = () => {
         logOut()
             .then(() => {
-                toast.success('Logged Out',{
-                    duration:2000
-                });
+                toast.success('Logged Out');
                 navigate(location.state = '/login');
             })
-            .catch(error => {
-                console.error("Logout error:", error);
-                toast.error("Logout failed",{
-                    duration:2000
-                });
+            .catch(() => {
+                toast.error("Logout failed");
             });
     }
 
@@ -67,12 +62,13 @@ const Navbar = () => {
 
                 {
                     user ?
-                        <div><button onClick={handleLogout} className='btn bg-orange-500 text-white text-xl font-mono'>Logout</button><Toaster position="top-right" reverseOrder={false} /></div> :
+                       <div> <button onClick={handleLogout} className='btn bg-orange-500 text-white text-xl font-mono'>Logout</button><Toaster position="top-right"
+                       reverseOrder={false} /></div> :
                         <Link to='/login'><button className='btn bg-orange-500 text-white text-xl font-mono'>Login</button></Link>
                 }
-
+                
             </div>
-            
+
         </div>
     );
 };
