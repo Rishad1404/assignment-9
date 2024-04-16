@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-
+import 'animate.css';
 const PropertyCard = ({ properties }) => {
-    const { id,estate_title, segment_name, price, status, area, location, facilities, image } = properties;
+    const { id,estate_title, segment_name, price, status, area, location, image } = properties;
 
     return (
-        <div className=" rounded overflow-hidden shadow-lg mx-2">
+        <div className=" rounded overflow-hidden shadow-lg mx-2 animate__animated animate__backInLeft animate__delay-1s">
             <img className="h-[200px] lg:h-[300px] w-full" src={image} alt={estate_title} />
             <div className="px-6 py-4">
                 <div className="font-bold text-2xl text-orange-500 mb-2">{estate_title}</div>
@@ -15,13 +15,8 @@ const PropertyCard = ({ properties }) => {
                 <p className="text-gray-700 mb-3 text-xl">Price: <span className='font-bold text-xl bg-orange-500 text-white p-1 rounded-md'>{price}</span></p>
                 <p className="text-gray-700 mb-3  text-xl">Area: <span className='font-bold text-xl bg-orange-500 text-white p-1 rounded-md'>{area}</span></p>
                 <p className="text-gray-700 mb-3  text-xl">Location: <span className='font-bold text-xl bg-orange-500 text-white p-1 rounded-md'>{location}</span></p>
-                <p className="text-gray-700 text-xl">Facilities: </p>
+                <p className="text-gray-700 text-xl">Facilities: <span className='font-bold text-xl bg-orange-400 text-white p-1 rounded-md'>Click view details to know</span></p>
 
-                <ul className="list-disc pl-4 ml-20 font-bold">
-                    {facilities.map((facility, index) => (
-                        <li key={index}>{facility}</li>
-                    ))}
-                </ul>
             </div>
             <Link to={`/property/${id}`}>
                 <div className="px-6 py-4">

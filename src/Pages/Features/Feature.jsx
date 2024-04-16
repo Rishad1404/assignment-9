@@ -1,9 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
+import { Helmet } from "react-helmet-async";
 import Navbar from "../Shared/Navbar/Navbar";
+
 
 const Feature = () => {
     return (
         <div className="container mx-auto">
+            <Helmet>
+                <title>Elite Estate | About</title>
+            </Helmet>
             <Navbar></Navbar>
             {/* Offers */}
             <div className="container mx-auto px-4 py-16 my-10  md:px-24 lg:px-8 lg:py-20 dark:bg-gray-100 dark:text-gray-800">

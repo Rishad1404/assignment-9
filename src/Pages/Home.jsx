@@ -1,4 +1,5 @@
 
+import { Helmet } from "react-helmet-async";
 import Banner from "./Banner/Banner";
 import GetInTouch from "./Home/GetInTouch";
 import HelpSection from "./Home/HelpSection";
@@ -9,6 +10,9 @@ const Home = () => {
     
     return (
         <div className="container mx-auto">
+            <Helmet>
+                <title>Elite Estate | Home</title>
+            </Helmet>
             <Navbar></Navbar>
             <Banner></Banner>
             <PropertyCards></PropertyCards>

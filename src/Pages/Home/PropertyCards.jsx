@@ -1,5 +1,6 @@
 import {useLoaderData} from 'react-router-dom'
 import PropertyCard from './PropertyCard';
+
 const PropertyCards = () => {
     const properties=useLoaderData()
     console.log(properties)

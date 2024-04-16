@@ -5,6 +5,7 @@ import { Link,useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthContext/AuthProvider";
+import { Helmet } from 'react-helmet-async';
 
 const Register = () => {
 
@@ -12,7 +13,7 @@ const Register = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const [showPass,setShowPass]=useState(false)
-    const { createUser,updateUserProfile } = useContext(AuthContext)
+    const { createUser } = useContext(AuthContext)
 
     const handleRegister = e => {
 
@@ -38,14 +39,11 @@ const Register = () => {
         }
 
         // Create User
-        createUser(email, password)
+        createUser(email, password,name,photo)
             .then(result => {
                 console.log(result.user)
-                updateUserProfile(name,photo)
-                .then(()=>{
-                    toast.success('User Created Successfully')
-                    navigate(location.state = '/')
-                })
+                toast.success('User Created Successfully')
+                navigate(location.state = '/')
                 
             })
             .catch(error => {
@@ -56,6 +54,9 @@ const Register = () => {
 
     return (
         <div className="container mx-auto mb-20">
+            <Helmet>
+                <title>Elite Estate | Register</title>
+            </Helmet>
             <Navbar></Navbar>
             <div className=" max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 md:w-3/4 lg:w-1/2 mx-auto">
                 <h1 className="text-2xl font-bold text-center mb-8">Welcome to Elite Estates</h1>
@@ -82,9 +83,9 @@ const Register = () => {
                             id="password" 
                             placeholder="Password" 
                             className="w-full px-4 py-3 rounded-md border dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" required />
-                               <span className='absolute top-4 right-4' onClick={()=>setShowPass(!showPass)}>
+                               <span className='absolute top-3 right-4' onClick={()=>setShowPass(!showPass)}>
                                 {
-                                    showPass?<FaEyeSlash></FaEyeSlash>:<FaEye></FaEye>
+                                    showPass?<FaEyeSlash className='w-5 h-5'></FaEyeSlash>:<FaEye className='w-5 h-5'></FaEye>
                                 }
                                </span>
                             </div>

@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
+import { Helmet } from "react-helmet-async";
 // import Navbar from "../Shared/Navbar/Navbar";
 
 const PropertyDetails = () => {
@@ -10,8 +11,11 @@ const PropertyDetails = () => {
 
     return (
         <div className="container mx-auto">
+            <Helmet>
+                <title>Elite Estate | Estate Details {id}</title>
+            </Helmet>
             <Navbar></Navbar>
-            <div className="lg:flex gap-16 mb-10 mt-10 ml-4">
+            <div className="lg:flex gap-16 mb-10 mt-10 ml-4 bg-orange-50 p-5">
                 <div className="bg-slate-100 p-5">
                 <img className="h-auto lg:w-full lg:h-[450px] rounded-lg" src={property.image} alt="" />
 
@@ -37,7 +41,7 @@ const PropertyDetails = () => {
                     </div>
                     <hr className="my-6 border-gray-300" />
                     <p className="text-lg">
-                        <span className="font-bold">Status:</span> {property.status}
+                        <span className="font-bold">Status:</span> <span className="bg-green-500 px-6 rounded-md text-xl font-bold">{property.status}</span>
                     </p>
                     <p className="text-lg">
                         <span className="font-bold">Area:</span> {property.area}
