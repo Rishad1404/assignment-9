@@ -1,7 +1,8 @@
 import toast, { Toaster } from 'react-hot-toast';
+import { FaEye,FaEyeSlash } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthContext/AuthProvider";
 
 const Login = () => {
@@ -9,6 +10,7 @@ const Login = () => {
     const { signIn, googleLogin, githubLogin } = useContext(AuthContext)
     const location = useLocation();
     const navigate = useNavigate();
+    const [showPass,setShowPass]=useState(false)
 
     const handleLogin = e => {
         e.preventDefault();
@@ -55,9 +57,19 @@ const Login = () => {
                         </div>
                         <div className="space-y-1 text-sm">
                             <label htmlFor="password" className="block dark:text-gray-600">Password</label>
-                            <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" required />
-                            <div className="flex justify-end text-xs dark:text-gray-600">
-                                <a rel="noopener noreferrer" href="#">Forgot Password?</a>
+                            
+                            <div className=" text-xs dark:text-gray-600 relative">
+                            <input 
+                            type={showPass ? "text" : "password" }
+                            name="password" 
+                            id="password" 
+                            placeholder="Password" 
+                            className="w-full px-4 py-3 rounded-md border dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" required />
+                               <span className='absolute top-4 right-4' onClick={()=>setShowPass(!showPass)}>
+                                {
+                                    showPass?<FaEyeSlash></FaEyeSlash>:<FaEye></FaEye>
+                                }
+                               </span>
                             </div>
                         </div>
                         <button className="block w-full p-3 text-center rounded-sm dark:text-gray-50 dark:bg-orange-500">Login</button>

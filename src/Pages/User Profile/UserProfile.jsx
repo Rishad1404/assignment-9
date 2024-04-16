@@ -16,7 +16,7 @@ const UserProfile = () => {
                         <CgProfile className="w-full h-full object-cover text-gray-500" />
                     )}
                 </div>
-                <div className="text-center mb-10">
+                <div className="text-center mb-10 border">
                     <h1 className="text-3xl lg:text-4xl font-extrabold text-orange-500 mb-8">User Profile</h1>
                     <div className="mx-1 lg:mx-5">
                         <h2 className="my-3 text-xl lg:text-2xl font-mono font-bold">Name:<span className="text-orange-500 border border-orange-500 px-5 py-1">{user.displayName || "N/A"}</span></h2>
