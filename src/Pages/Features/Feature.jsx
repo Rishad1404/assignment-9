@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Helmet } from "react-helmet-async";
 import Navbar from "../Shared/Navbar/Navbar";
+import Location from "./Location";
 
 
 const Feature = () => {
@@ -211,6 +212,7 @@ const Feature = () => {
                     </div>
                 </div>
             </section>
+            <Location></Location>
         </div>
     );
 };

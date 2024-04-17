@@ -38,12 +38,12 @@ const router =createBrowserRouter([
             {
                 path:'/property/:id',
                 element:<PrivateRoute><PropertyDetails></PropertyDetails></PrivateRoute>,
-                loader:()=>fetch('../../public/property.json')
+
             },
             {
                 path:'/properties',
                 element:<PrivateRoute><Properties></Properties></PrivateRoute>,
-                loader:()=>fetch('../../public/property.json')
+
             },
             {
                 path:'/updateProfile',

@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 const Error = () => {
     return (
-        <section className="flex items-center h-full p-16  dark:text-gray-800">
+        <>
+        <div className="container mx-auto">
+         <section className="flex items-center h-full p-16  dark:text-gray-800">
             <div className="container flex flex-col items-center justify-center px-5 mx-auto my-52">
                 <div className="max-w-md text-center">
                     <h2 className="mb-8 font-extrabold text-9xl dark:text-gray-400">
@@ -13,6 +15,10 @@ const Error = () => {
                 </div>
             </div>
         </section>
+        
+        </div>
+        </>
+       
     );
 };
 
