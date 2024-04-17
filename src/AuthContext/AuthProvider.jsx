@@ -29,8 +29,10 @@ const updateUserProfile=(name,photo)=>{
       
 }
 // Update Email
-const updateEmail = (email) => {
-    updateEmail(auth.currentUser, email)
+const updateEmail = (Email) => {
+    updateEmail(auth.currentUser, {
+        email:Email
+    })
 }
 
 
