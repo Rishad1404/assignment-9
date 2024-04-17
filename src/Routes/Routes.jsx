@@ -21,7 +21,7 @@ const router =createBrowserRouter([
             {
                 path:'/',
                 element:<Home></Home>,
-                loader:()=>fetch('../../public/property.json')
+                loader:()=>fetch('/property.json')
             },
             {
                 path:'/login',
@@ -38,12 +38,12 @@ const router =createBrowserRouter([
             {
                 path:'/property/:id',
                 element:<PrivateRoute><PropertyDetails></PropertyDetails></PrivateRoute>,
-
+                loader:()=>fetch('/property.json')
             },
             {
                 path:'/properties',
                 element:<PrivateRoute><Properties></Properties></PrivateRoute>,
-
+                loader:()=>fetch('/property.json')
             },
             {
                 path:'/updateProfile',
