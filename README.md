@@ -15,7 +15,10 @@ a.Animate.css
 b.React-leaflet
 c.Swiper Slider
 d.React Hook form
+<<<<<<< HEAD
 
+=======
+>>>>>>> d93f0a9258b6821e6af8cd34bab58a10bf37e2ba
 
 
 
