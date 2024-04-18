@@ -15,7 +15,7 @@ const PropertyCard = ({ properties }) => {
                 <p className="text-gray-700 mb-3 text-xl">Price: <span className='font-bold text-xl bg-orange-500 text-white p-1 rounded-md'>{price}</span></p>
                 <p className="text-gray-700 mb-3  text-xl">Area: <span className='font-bold text-xl bg-orange-500 text-white p-1 rounded-md'>{area}</span></p>
                 <p className="text-gray-700 mb-3  text-xl">Location: <span className='font-bold text-xl bg-orange-500 text-white p-1 rounded-md'>{location}</span></p>
-                <p className="text-gray-700 text-xl">Facilities: <span className='font-bold text-xl bg-orange-400 text-white p-1 rounded-md'>Click view details to know</span></p>
+                <p className="text-gray-700 text-xl">Facilities: <span className='font-bold text-xl  text-green-500 p-1 rounded-md'>Click view details to know</span></p>
 
             </div>
             <Link to={`/property/${id}`}>

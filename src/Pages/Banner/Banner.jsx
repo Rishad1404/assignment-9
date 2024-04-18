@@ -1,6 +1,18 @@
 import Slider from "../Home/Slider";
+import { useRef } from "react";
+import PropertyCards from "../Home/PropertyCards";
 
 const Banner = () => {
+
+    const propertyRef = useRef(null);
+
+    const scrollToProperty = () => {
+        if (propertyRef.current) {
+            propertyRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
+
     return (
         <section>
             <Slider></Slider>
@@ -10,8 +22,8 @@ const Banner = () => {
                     <h1 className="text-5xl font-bold leading-none sm:text-6xl xl:max-w-3xl dark:text-gray-50">Unrivalled Elegance Awaits</h1>
                     <h2 className="mt-6 mb-8 text-lg sm:mb-12 xl:max-w-3xl dark:text-gray-50"> Explore Our Exclusive Estates!</h2>
                     <div className="flex flex-wrap justify-center">
-                        <button type="button" className="px-8 py-3 m-2 text-lg font-semibold rounded dark:bg-gray-100 dark:text-gray-900">Get started</button>
-                        <button type="button" className="px-8 py-3 m-2 text-lg border rounded dark:border-gray-300 dark:text-gray-50">Learn more</button>
+                        <button  onClick={scrollToProperty} type="button" className="px-8 py-3 m-2 text-lg font-semibold rounded dark:bg-gray-100 dark:text-gray-900">Click Here</button>
+                        <button  type="button" className="px-8 py-3 m-2 text-lg font-semibold rounded dark:bg-gray-100 dark:text-gray-900">Learn More</button>
                     </div>
                 </div>
             </div>
@@ -19,6 +31,9 @@ const Banner = () => {
             <div className="text-center bg-slate-300 p-10 my-10">
                 <h1 className="text-6xl font-bold leading-none  text-black">Luxury Selections</h1>
                 <h2 className="mt-6 text-2xl  text-black">  Find Your Perfect Estate!</h2>
+            </div>
+            <div ref={propertyRef}>
+                <PropertyCards></PropertyCards>
             </div>
         </section>
     );
