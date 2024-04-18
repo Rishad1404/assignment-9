@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Helmet } from "react-helmet-async";
 import Navbar from "../Shared/Navbar/Navbar";
-import Location from "./Location";
 
 
 const Feature = () => {
@@ -207,12 +206,8 @@ const Feature = () => {
                             </div>
                         </a>
                     </div>
-                    <div className="flex justify-center">
-                        <button type="button" className="px-6 py-3 text-sm rounded-md hover:underline dark:bg-gray-50 dark:text-gray-600">Load more posts...</button>
-                    </div>
                 </div>
             </section>
-            <Location></Location>
         </div>
     );
 };
