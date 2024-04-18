@@ -10,7 +10,7 @@ const UserProfile = () => {
     return (
         <div className="container mx-auto">
             <Helmet>
-                <title>Elite Estate | User Profile</title>
+                <title>User Profile</title>
             </Helmet>
             <Navbar />
             <div className="my-10 w-full lg:w-3/4 bg-slate-100 lg:flex flex-col items-center justify-center mx-auto p-2">

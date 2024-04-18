@@ -11,7 +11,7 @@ const Home = () => {
     return (
         <div className="container mx-auto">
             <Helmet>
-                <title>Elite Estate | Home</title>
+                <title> Home</title>
             </Helmet>
             <Navbar></Navbar>
             <Banner></Banner>

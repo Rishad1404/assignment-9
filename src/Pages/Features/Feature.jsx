@@ -8,7 +8,7 @@ const Feature = () => {
     return (
         <div className="container mx-auto">
             <Helmet>
-                <title>Elite Estate | About</title>
+                <title>About</title>
             </Helmet>
             <Navbar></Navbar>
             {/* Offers */}

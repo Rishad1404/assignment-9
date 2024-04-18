@@ -49,10 +49,10 @@ const Login = () => {
     return (
         <div className="container mx-auto mb-20">
             <Helmet>
-                <title>Elite Estate | Login</title>
+                <title>Login </title>
             </Helmet>
             <Navbar></Navbar>
-            <div className=" max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 md:w-3/4 lg:w-1/2 mx-auto">
+            <div className=" max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-100 dark:text-gray-800 md:w-3/4 lg:w-1/2 mx-auto shadow-md">
                 <h1 className="text-2xl font-bold text-center">Login now!</h1>
                     <form onSubmit={handleLogin} noValidate="" action="" className="space-y-6">
                         <div className="space-y-1 text-sm">

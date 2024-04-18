@@ -9,7 +9,7 @@ const Properties = () => {
     return (
         <div className="container mx-auto">
             <Helmet>
-                <title>Elite Estate | Properties</title>
+                <title>Properties</title>
             </Helmet>
             <Navbar></Navbar>
             <PropertyCards></PropertyCards>

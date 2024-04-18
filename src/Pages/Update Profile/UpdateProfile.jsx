@@ -40,7 +40,7 @@ const UpdateProfile = () => {
     return (
         <div className="container mx-auto">
             <Helmet>
-                <title>Elite Estate | Update Profile</title>
+                <title>Update Profile</title>
             </Helmet>
             <Navbar />
             <div className="my-10 w-full lg:w-auto bg-slate-100 lg:flex gap-10 items-center justify-center mx-auto">
